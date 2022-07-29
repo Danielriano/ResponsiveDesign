@@ -151,7 +151,7 @@ main {
     min-width: 235px;
     max-width: 500px;
     height: 360px;
-    margin: 0 auto;
+    margin: 0 24px;
     font-family: "inter" , sans-serif;
 }
 .main-currency-table .currency-table--title{
@@ -160,8 +160,7 @@ main {
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
-    text-align: left;
-    margin-left: 15px;
+
 
 }
 .currency-table--container, 
@@ -240,8 +239,6 @@ main {
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--secondary-blue);
-    text-align: left;
-    margin-left: 15px;
 }
 .currency-table--date{
    width: 190px; 
@@ -425,7 +422,7 @@ main {
     min-width: 190px;
     max-width: 300px;
     height: 250px; 
-    margin: 50px 5px 0;
+    margin: 50px 50px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -521,6 +518,13 @@ main {
     height: 20px;
     background-image: url('./assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom;
+}
+.main-table-container{
+    display: flex;
+    height: auto;
+    overflow: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:x proximity;
 }
 .plans-container--slider{
     display: flex;
