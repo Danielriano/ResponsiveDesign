@@ -420,16 +420,21 @@ main {
 
 .plans-container--card{
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
-    height: 250px;
-    margin: 50px auto 0;
+    height: 250px; 
+    margin: 50px 5px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgb(89,73,30, 0.16);
 }
+#blackcard{
+ background-color: var(--warm-black);
+}
+
 .recommended{
     position: absolute;
     width: 120px;
@@ -442,12 +447,39 @@ main {
     border-radius: 8px;
     color: var(--just-white);
 }
-.plan-card--title{
+.basicplan{
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    font-size: 1.2rem;
+    background-color:#1A9AF7;
+    border-radius: 8px;
+    color: var(--just-white);   
+}
+.premium{
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    font-size: 1.2rem;
+    background-color:#808080;
+    border-radius: 8px;
+    color: var(--just-white);
+}
+.plan-card--title {
     padding-top: 30px;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.8rem;
     color: var(--black);
+}
+.title_dark{
+    color: var(--off-white);
 }
 .plan-card--price{
     padding: 5px 0;
@@ -455,6 +487,9 @@ main {
     font-weight: bold;
     line-height: 5.3rem;
     color: black;
+}
+#price_black{
+    color: white;
 }
 .plan-card--price span{
     font-size: 1.2rem;
@@ -480,9 +515,42 @@ main {
     font-family: 'DM SANS' , sans-serif;
 }
 .plan-card--cta span{
+
     display: inline-block;
     width: 20px;
     height: 20px;
     background-image: url('./assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom;
+}
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.left li{
+    margin: 10px 0;
+    color: var(--just-white);
 }
